@@ -140,6 +140,6 @@
 		</element>
 	</elements>
 	<help>
-		Query an Oracle database and return the results to up.time
+		Monitor Oracle Tablespace Capacity Metrics.
 	</help>
 </uptime>
