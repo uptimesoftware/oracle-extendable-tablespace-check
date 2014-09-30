@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Built-By: syoon
+Build-Jdk: 1.7.0_67-b01 
+Plugin-Class: com.uptimesoftware.uptime.plugin.OracleExtendableTablespaceCheck
+Plugin-Version: 1.0
+Plugin-Id: oracle-extendable-tablespace-check
+Plugin-Provider: Uptime Software
+

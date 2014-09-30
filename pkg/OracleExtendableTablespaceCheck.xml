@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+	xmlns="http://www.uptimesoftware.com/erdc/erdc" xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0"
+	target_grouping="other">
+
+	<class>Oracle Extendable Tablespace Check</class>
+	<exec>JAVA_PLUGIN:UptimeOracleExtendableTablespaceCheck</exec>
+	<erdc_version>1.0</erdc_version>
+	<category>Applications - Databases</category>
+	<category_related></category_related>
+	<grid_info>
+		<supported_versions>7.3</supported_versions>
+		<supported_platforms>windows, linux</supported_platforms>
+		<upgrade_in_place>true</upgrade_in_place>
+		<requires_agent_scripts>false</requires_agent_scripts>
+	</grid_info>
+
+	<elements>
+		<element name="port" parameter_type="input" data_type="integer" gui_basic="1" range_type="0" units="">
+			<control_options>size:10</control_options>
+			<default_value>1521</default_value>
+			<short_description>Port</short_description>
+			<long_description>Enter the port the database is listening on
+			</long_description>
+			<validation_rule>
+				<alphanumeric />
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<integer />
+			</gui_type>
+		</element>
+
+		<element name="username" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+			<control_options>size:10</control_options>
+			<default_value></default_value>
+			<short_description>Database user</short_description>
+			<long_description>Enter a userid with read access to the database
+			</long_description>
+			<validation_rule>
+				<alphanumeric />
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<string />
+			</gui_type>
+		</element>
+
+		<element name="password" parameter_type="input" data_type="string" gui_basic="1" range_type="0" units="">
+			<control_options>size:10</control_options>
+			<default_value></default_value>
+			<short_description>Database password</short_description>
+			<long_description>Enter the password for the userid with read access to the database
+			</long_description>
+			<validation_rule>
+				<alphanumeric />
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<password />
+			</gui_type>
+		</element>
+
+		<element name="sid" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+			<control_options>width:40em</control_options>
+			<default_value>ORCL</default_value>
+			<short_description>SID</short_description>
+			<long_description>SID to connect to</long_description>
+			<validation_rule />
+			<error_message />
+			<gui_type>
+				<string />
+			</gui_type>
+		</element>
+
+		<element name="available" parameter_type="output" data_type="ranged" gui_basic="1" range_type="0" units="KB">
+			<control_options>size:8</control_options>
+			<default_value />
+			<short_description>Available Space</short_description>
+			<long_description>Available Space</long_description>
+			<validation_rule />
+			<error_message />
+			<gui_type>
+				<integer />
+			</gui_type>
+		</element>
+
+		<element name="used" parameter_type="output" data_type="ranged" gui_basic="1" range_type="0" units="KB">
+			<control_options>size:8</control_options>
+			<default_value />
+			<short_description>Used Space</short_description>
+			<long_description>Used Space</long_description>
+			<validation_rule />
+			<error_message />
+			<gui_type>
+				<decimal />
+			</gui_type>
+		</element>
+
+		<element name="free" parameter_type="output" data_type="ranged" gui_basic="1" range_type="0" units="KB">
+			<control_options>size:8</control_options>
+			<default_value />
+			<short_description>Free Space</short_description>
+			<long_description>Free Space</long_description>
+			<validation_rule />
+			<error_message />
+			<gui_type>
+				<decimal />
+			</gui_type>
+		</element>
+
+		<element name="percent" parameter_type="output" data_type="ranged" gui_basic="1" range_type="0" units="pct">
+			<control_options>size:8</control_options>
+			<default_value />
+			<short_description>Percent Free</short_description>
+			<long_description>Percent Free</long_description>
+			<validation_rule />
+			<error_message />
+			<gui_type>
+				<decimal />
+			</gui_type>
+		</element>
+
+		<element name="timer" parameter_type="output" data_type="integer" gui_basic="0" range_type="0" units="ms">
+			<control_options>size:8</control_options>
+			<default_value />
+			<short_description>Response time</short_description>
+			<long_description>Response time in ms</long_description>
+			<validation_rule />
+			<error_message />
+			<gui_type>
+				<integer />
+			</gui_type>
+		</element>
+	</elements>
+	<help>
+		Query an Oracle database and return the results to up.time
+	</help>
+</uptime>
