@@ -118,8 +118,8 @@
 		<element name="percent" parameter_type="output" data_type="ranged" gui_basic="1" range_type="0" units="pct">
 			<control_options>size:8</control_options>
 			<default_value />
-			<short_description>Percent Free</short_description>
-			<long_description>Percent Free</long_description>
+			<short_description>Percent Used</short_description>
+			<long_description>Percent Used</long_description>
 			<validation_rule />
 			<error_message />
 			<gui_type>
